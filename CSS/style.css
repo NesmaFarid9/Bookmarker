@@ -1,0 +1,147 @@
+ body{
+    background-color: #F7ECDE;
+}
+::selection {
+    background: #fec260;
+    color: black;
+}
+a{
+    color: inherit;
+}
+.main-title {
+    font-family: 'Pacifico', 'cursive';
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    display: inline-block;    
+}
+.main-title::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 32%;
+    left: 0;
+    bottom: 2px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+.main-title:hover::before {
+    height: 60%;
+}
+.sub-title{
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.edit-label-name{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.edit-input-name,
+.edit-border-submit,
+td{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.submit-btn{
+    background-color: #d1512d;
+    padding: 6px 50px;
+    font-size: 17px;
+    color: white;
+}
+.submit-btn:hover{
+    background-color: #BB4120;
+    border-color: #a03315;
+    color: white;
+}
+.submit-btn:active{
+     background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+.form-control:focus{
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;;
+}
+.main-content .edit-border{
+    border-top: 1px dotted black;
+}
+.edit-border-submit{
+    border-bottom: 1px dotted black;
+}
+th{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+.view-btn{
+    background-color: #9eb23b;
+    border: 1px solid #9eb23b;
+    color: white;
+}
+.view-btn:hover{
+    background-color: #8a9e23;
+    border: 1px solid #6e8018;
+    color: white;
+}
+.view-btn:active{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+.delete-btn{
+    background-color: #eb1d36;
+    border: 1px solid #eb1d36;
+    color: white;
+}
+.delete-btn:hover{
+    background-color: #d30820;
+    border: 1px solid #ba081d;
+    color: white;
+}
+.edit-input-verfication-name:focus{
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+.circle{
+    width: 20px;
+    height: 20px;
+}
+#messageBox p{
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 27px;
+    max-width: 450px;
+}
+.rule-one span{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+#messageBox {
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+}
+.cancel button{
+    opacity: 1;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 28px;
+}
+.cancel button:active{
+   box-shadow: none;
+}

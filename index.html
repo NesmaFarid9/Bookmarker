@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>Bookmarker</title>
+    <!-- logo -->
+     <link rel="shortcut icon" href="./images/star.png" type="image/x-icon">
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <!--style  -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+</head>
+<body>
+    <div class="py-5 text-center">
+        <h1 class="main-title position-relative">Bookmarker</h1>
+    </div>
+    
+    <div class="main-content">
+        <div class="container edit-border">
+            <h2 class="text-center sub-title pt-4">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="main-form border-bottom">
+                <div class="mb-4">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                <label for="siteName" class="form-label edit-label-name">Site Name</label>
+                <div class="position-relative">
+                    <input type="text" oninput="validationName()" class="form-control edit-input-name pe-5" id="siteName" placeholder="Bookmark Name">
+                    <i id="nameIcon" class="position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                </div>               
+            </div>
+             <div class="mb-3">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    <label for="siteURL" class="form-label edit-label-name">Site URL</label>              
+                    <div class="position-relative">
+                        <input type="url" oninput="validationUrl()" class="form-control edit-input-name pe-5" id="siteURL" placeholder="Website URL">
+                        <i id="urlIcon" class="position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                   </div>
+                </div>
+           
+            <div class="d-flex flex-column justify-content-center align-items-center pt-3">
+                <button onclick="checkInputs()" class="btn submit-btn">Submit</button>
+            </div>
+            <div class="edit-border-submit pt-4 border-black"></div>
+            </div>
+        </div>
+    </div>
+    <section class="table-data">
+        <div class="tabele-content py-5">
+                <div class="container" >
+                   <table class="table text-center">
+                        <thead class="">
+                            <tr>
+                                <th>Index</th>
+                                <th>Website Name</th>
+                                <th>Visit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="addTable">
+
+
+                        </tbody>
+
+                    </table>
+        
+                </div>
+
+        </div>
+    </section>
+    <div id="messageBox"  class="position-fixed start-50 top-50 translate-middle bg-white text-black py-3 px-4 rounded shadow d-none z-3">
+        <div class="header-alert d-flex justify-content-between pb-3">         
+            <div class="circles d-flex gap-2 align-items-center">
+                <div class="bg-danger rounded-circle circle me-1"></div>
+                <div class="bg-warning rounded-circle circle me-1"></div>
+                <div class="bg-success rounded-circle circle me-1"></div>
+           </div>
+           <div class="cancel m-3 text-black">
+                <button type="button" onclick="hideMessage()" class="btn-close btn-close-black fs-5 text-black" data-bs-dismiss="offcanvasDark" aria-label="Close"></button>
+           </div>
+        </div>
+        <p class="m-0 pb-2">Site Name or Url is not valid, Please follow the rules below :</p>
+        <div class="rule-one pt-3">
+            <span class="text-danger"><i class="fa-regular fa-circle-right p-2"></i></span>
+            <span>Site name must contain at least 3 characters</span>
+        </div>
+        <div class="rule-one pb-4">
+            <span class="text-danger"><i class="fa-regular fa-circle-right p-2"></i></span>
+            <span>Site URL must be a valid one</span>
+        </div>
+        
+    </div>
+
+    <script src="./JS/bootstrap.bundle.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+</html>
